@@ -1,0 +1,9 @@
+node_modules/
+.DS_Store
+*.log
+
+# クライアント支給素材（公開リポジトリにコミットしない）
+assets-private/
+素材/
+資料/
+*.xlsx
