@@ -1,15 +1,16 @@
 :root{
-  --c-base:#FBF9F6;
-  --c-main:#2F4A3C;
-  --c-main-d:#233729;
-  --c-accent:#C1A86B;
-  --c-accent-d:#94763A;
-  --c-tint:#EEF3EF;
-  --c-cream:#F8F3E8;
-  --c-sub:#B98BAC;
+  --c-base:#FFFBF6;
+  --c-main:#3A6450;
+  --c-main-d:#284A39;
+  --c-accent:#D2A657;
+  --c-accent-d:#9E742A;
+  --c-tint:#F1F6EC;
+  --c-cream:#FDF3E6;
+  --c-blush:#FBE9E5;
+  --c-sub:#D593A8;
   --c-text:#2E2A28;
   --c-muted:#6B635D;
-  --c-line:#DED5CC;
+  --c-line:#E8DDD2;
   --c-white:#fff;
   --serif:"Noto Serif JP",serif;
   --sans:"Noto Sans JP",sans-serif;
@@ -44,13 +45,14 @@ a{color:inherit}
   border-radius:4px;padding:8px 12px;font-size:13px;cursor:pointer;font-family:var(--sans)}
 
 /* ---------- hero ---------- */
-.hero{background:linear-gradient(180deg,#F8FAF7 0%,var(--c-tint) 100%);color:var(--c-text);
+.hero{background:linear-gradient(125deg,#FFF8EF 0%,#FDEEE3 55%,var(--c-blush) 100%);color:var(--c-text);
   position:relative;overflow:hidden;padding:76px 0 70px;border-bottom:1px solid var(--c-line)}
 .hero::before{content:"";position:absolute;inset:0;pointer-events:none;
-  background:radial-gradient(ellipse at 92% 8%,rgba(193,168,107,.16),transparent 55%)}
+  background:radial-gradient(ellipse at 88% 6%,rgba(245,196,112,.38),transparent 52%),
+    radial-gradient(ellipse at 6% 100%,rgba(213,147,168,.14),transparent 50%)}
 .hero .wrap{position:relative}
 .hero-in{display:grid;grid-template-columns:1.08fr .92fr;gap:52px;align-items:center}
-.hero-rule{width:54px;height:1px;background:var(--c-accent);margin-bottom:28px}
+.hero-rule{width:54px;height:2px;background:var(--c-accent);margin-bottom:28px}
 .hero h1{font-family:var(--serif);font-weight:600;font-size:clamp(24px,3.7vw,40px);color:var(--c-main-d);
   line-height:1.62;margin:0 0 24px;letter-spacing:.03em;text-wrap:balance}
 .hero h1 .gold{color:var(--c-accent-d)}
@@ -58,10 +60,10 @@ a{color:inherit}
 .hero p{font-size:16.5px;line-height:2;margin:0 0 34px;color:var(--c-text)}
 .hero-btns{display:flex;flex-wrap:wrap;gap:14px}
 .hero-photo{position:relative;aspect-ratio:4/3;border-radius:6px;overflow:hidden;
-  background:#E2EAE4;display:grid;place-items:center}
+  background:#F6E4D8;display:grid;place-items:center;box-shadow:0 18px 40px -22px rgba(158,116,42,.45)}
 .hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .hero-photo span{font-size:13.5px;line-height:1.8;color:var(--c-muted);text-align:center;
-  border:1px dashed #AFC0B3;border-radius:4px;padding:14px 22px}
+  border:1px dashed #D7B9A2;border-radius:4px;padding:14px 22px}
 .btn{display:inline-block;text-decoration:none;padding:15px 30px;border-radius:4px;
   font-size:15px;font-weight:500;transition:.2s}
 .btn-gold{background:var(--c-accent);color:#2A2218}
@@ -80,7 +82,7 @@ a{color:inherit}
 .trust-in .trust-main img{height:60px}
 .trust-txt{display:inline-flex;flex-direction:column;justify-content:center;align-items:center;height:38px;padding:0 16px;border:1px solid var(--c-line);border-radius:3px;background:#fff;font-family:var(--serif);font-weight:600;font-size:15px;color:var(--c-main-d);line-height:1.15}
 .trust-txt small{font-family:var(--sans);font-weight:400;font-size:10px;color:var(--c-muted);letter-spacing:.05em}
-.trust-in .trust-sub{height:38px;opacity:.95}
+.trust-in .trust-sub{height:40px}
 .trust-sep{width:1px;height:42px;background:var(--c-line)}
 .trust-note{text-align:center;font-size:12.5px;color:var(--c-muted);margin:16px 0 0;line-height:1.7}
 
@@ -132,7 +134,7 @@ h3{font-family:var(--serif);font-weight:600;font-size:21px;line-height:1.6;margi
 /* ---------- price cards ---------- */
 .pcard{display:flex;flex-direction:column;position:relative}
 .pcard .badge{position:absolute;top:-12px;left:26px;margin:0}
-.pcard.rec{border:2px solid var(--c-accent)}
+.pcard.rec{border:2px solid var(--c-accent);background:#FFFCF6}
 .card .pc-sub{font-size:13.5px;margin:0 0 16px}
 .card .pc-lbl{font-size:15px;font-weight:500;color:var(--c-main);margin:auto 0 0;
   border-top:1px solid var(--c-line);padding-top:16px}
@@ -144,6 +146,12 @@ h3{font-family:var(--serif);font-weight:600;font-size:21px;line-height:1.6;margi
 .band h3{margin:0 0 8px;color:var(--c-main-d)}
 .band p{margin:0;font-size:15.5px;line-height:1.95}
 .band strong{color:var(--c-accent-d)}
+
+/* ---------- sun marriage ---------- */
+.smcard{background:#fff;border:1px solid var(--c-line);border-radius:6px;padding:34px 34px 26px}
+.smcard .sm-logo{width:220px;margin:0 auto 18px}
+.smcard h3{text-align:center;margin-bottom:18px}
+.info td small{display:block;font-size:12.5px;color:var(--c-muted);line-height:1.6}
 
 /* ---------- price table ---------- */
 .ptable-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
@@ -233,7 +241,7 @@ h3{font-family:var(--serif);font-weight:600;font-size:21px;line-height:1.6;margi
 .info th{width:200px;font-weight:500;color:var(--c-main);white-space:nowrap}
 
 /* ---------- cta block ---------- */
-.cta{background:var(--c-tint);color:var(--c-text);padding:76px 0;text-align:center;border-top:1px solid var(--c-line)}
+.cta{background:linear-gradient(180deg,#FFF8EF,var(--c-blush));color:var(--c-text);padding:76px 0;text-align:center;border-top:1px solid var(--c-line)}
 .cta h2{font-family:var(--serif);font-size:clamp(22px,3.2vw,30px);margin:0 0 16px;font-weight:600;line-height:1.6;color:var(--c-main-d)}
 .cta>.wrap>p{color:var(--c-muted);margin:0 0 34px;font-size:16px;line-height:2}
 .cta-btns{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
@@ -243,10 +251,10 @@ h3{font-family:var(--serif);font-weight:600;font-size:21px;line-height:1.6;margi
 .qr span{display:block;font-size:12.5px;margin-top:9px;color:var(--c-muted)}
 
 /* ---------- page head ---------- */
-.ph{background:linear-gradient(180deg,#F8FAF7,var(--c-tint));color:var(--c-main-d);padding:60px 0 52px;
+.ph{background:linear-gradient(125deg,#FFF8EF 0%,#FDEEE3 60%,var(--c-blush) 100%);color:var(--c-main-d);padding:60px 0 52px;
   text-align:center;position:relative;overflow:hidden;border-bottom:1px solid var(--c-line)}
 .ph::before{content:"";position:absolute;inset:0;pointer-events:none;
-  background:radial-gradient(ellipse at 85% 15%,rgba(193,168,107,.14),transparent 60%)}
+  background:radial-gradient(ellipse at 85% 10%,rgba(245,196,112,.30),transparent 58%)}
 .ph .wrap{position:relative}
 .ph .en{font-size:11.5px;letter-spacing:.22em;color:var(--c-accent-d);display:block;margin-bottom:12px}
 .ph h1{font-family:var(--serif);font-size:clamp(24px,4vw,34px);margin:0;font-weight:600;letter-spacing:.03em}
