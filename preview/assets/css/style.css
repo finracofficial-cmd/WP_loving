@@ -316,6 +316,24 @@ h3{font-family:var(--serif);font-weight:600;font-size:21px;line-height:1.6;margi
   .ol li{padding-left:50px}
 }
 
+
+/* ---------- for you (あるある) ---------- */
+.sec-blush{background:linear-gradient(180deg,#FFF9F4,#FDF1EC)}
+.aru{list-style:none;padding:0;margin:0 auto 30px;max-width:860px;display:grid;
+  grid-template-columns:repeat(2,1fr);gap:12px 28px}
+.aru li{position:relative;padding:14px 16px 14px 46px;background:#fff;border-radius:6px;
+  font-size:15.5px;line-height:1.7;border:1px solid var(--c-line)}
+.aru li::before{content:"";position:absolute;left:16px;top:50%;width:16px;height:16px;margin-top:-8px;
+  border-radius:50%;background:var(--c-sub);opacity:.85}
+.aru li::after{content:"";position:absolute;left:21px;top:50%;width:6px;height:3px;margin-top:-3px;
+  border-left:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(-45deg)}
+.aru-close{text-align:center;font-size:16px;line-height:2;margin:0 0 26px;color:var(--c-main-d);font-family:var(--serif)}
+/* ---------- sun marriage option ---------- */
+.info tr.sum th,.info tr.sum td{font-weight:700;background:#FFFCF6}
+.sm-opt{margin-top:22px;padding-top:6px;border-top:1px dashed var(--c-line)}
+.sm-opt-h{font-size:14px;font-weight:500;color:var(--c-accent-d);margin:14px 0 4px}
+@media(max-width:760px){.aru{grid-template-columns:1fr}}
+
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,
 select:focus-visible,textarea:focus-visible{outline:2px solid var(--c-accent);outline-offset:2px}
