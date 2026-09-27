@@ -38,8 +38,8 @@ a{color:inherit}
 .hd-nav{margin-left:auto;display:flex;align-items:center;gap:22px}
 .hd-nav a{font-size:14px;text-decoration:none;color:var(--c-text);white-space:nowrap}
 .hd-nav a:hover{color:var(--c-main)}
-.hd-cta{background:var(--c-main);color:#fff!important;padding:9px 18px;border-radius:4px;
-  font-size:13.5px;font-weight:500}
+.hd-cta{background:var(--c-main);color:#fff!important;padding:11px 22px;border-radius:4px;
+  font-size:14.5px;font-weight:500}
 .hd-cta:hover{background:var(--c-main-d)}
 .hd-tgl{display:none;margin-left:auto;background:none;border:1px solid var(--c-line);
   border-radius:4px;padding:8px 12px;font-size:13px;cursor:pointer;font-family:var(--sans)}
@@ -66,6 +66,7 @@ a{color:inherit}
   border:1px dashed #D7B9A2;border-radius:4px;padding:14px 22px}
 .btn{display:inline-block;text-decoration:none;padding:15px 30px;border-radius:4px;
   font-size:15px;font-weight:500;transition:.2s}
+.btn-main,.btn-line{padding:17px 36px;font-size:16px}
 .btn-gold{background:var(--c-accent);color:#2A2218}
 .btn-gold:hover{background:#d0b87d}
 .btn-ghost{border:1px solid var(--c-main);color:var(--c-main);background:#fff}
@@ -316,6 +317,12 @@ h3{font-family:var(--serif);font-weight:600;font-size:21px;line-height:1.6;margi
   .ol li{padding-left:50px}
 }
 
+
+/* ---------- lciq total ---------- */
+.total-score{display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;
+  margin:-14px 0 34px;padding:18px 20px;border:2px solid var(--c-accent);border-radius:6px;
+  background:#FFFCF6;font-size:15px;color:var(--c-text);text-align:center}
+.total-score span{font-family:var(--serif);font-weight:600;font-size:20px;color:var(--c-accent-d)}
 
 /* ---------- for you (あるある) ---------- */
 .sec-blush{background:linear-gradient(180deg,#FFF9F4,#FDF1EC)}
