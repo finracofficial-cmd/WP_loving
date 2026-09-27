@@ -334,7 +334,11 @@ h3{font-family:var(--serif);font-weight:600;font-size:21px;line-height:1.6;margi
   border-radius:50%;background:var(--c-sub);opacity:.85}
 .aru li::after{content:"";position:absolute;left:21px;top:50%;width:6px;height:3px;margin-top:-3px;
   border-left:2px solid #fff;border-bottom:2px solid #fff;transform:rotate(-45deg)}
-.aru-close{text-align:center;font-size:16px;line-height:2;margin:0 0 26px;color:var(--c-main-d);font-family:var(--serif)}
+.aru-note{max-width:860px;margin:0 auto 30px;background:#fff;border:1px solid var(--c-line);
+  border-left:3px solid var(--c-sub);border-radius:0 6px 6px 0;padding:22px 26px}
+.aru-note-h{font-family:var(--serif);font-weight:600;font-size:17px;color:var(--c-main-d);margin:0 0 8px}
+.aru-note p:not(.aru-note-h){font-size:15px;line-height:1.95;margin:0}
+.aru-close{text-align:center;font-size:15.5px;line-height:2;margin:0 0 26px;color:var(--c-main-d);font-family:var(--serif)}
 /* ---------- sun marriage option ---------- */
 .info tr.sum th,.info tr.sum td{font-weight:700;background:#FFFCF6}
 .sm-opt{margin-top:22px;padding-top:6px;border-top:1px dashed var(--c-line)}
