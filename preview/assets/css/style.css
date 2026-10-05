@@ -388,3 +388,11 @@ select:focus-visible,textarea:focus-visible{outline:2px solid var(--c-accent);ou
   .hd-cta{margin:10px 22px;text-align:center;border-radius:4px}
   .hd-tgl{display:block}
 }
+/* 代表のあゆみ */
+.tl-h{font-family:var(--serif);font-size:20px;margin:56px 0 18px;color:var(--c-main)}
+.tl{display:grid;grid-template-columns:120px 1fr;margin:0;border-top:1px solid var(--c-line)}
+.tl dt,.tl dd{margin:0;padding:16px 0;border-bottom:1px solid var(--c-line);line-height:1.8}
+.tl dt{font-family:var(--serif);font-weight:600;color:var(--c-accent-d);padding-right:16px}
+.tl dd{font-size:15.5px}
+@media(max-width:600px){.tl{grid-template-columns:1fr}.tl dt{border-bottom:none;padding-bottom:0}.tl dd{padding-top:4px}}
+.hd-logo img{width:160px}.hd-nav{gap:16px}.hd-cta{padding:11px 18px}
