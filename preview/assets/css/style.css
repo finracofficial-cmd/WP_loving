@@ -418,3 +418,13 @@ select:focus-visible,textarea:focus-visible{outline:2px solid var(--c-accent);ou
 .hero h1 .gold{color:#93640A;font-weight:700;padding:0 .06em;
   background:linear-gradient(transparent 62%,rgba(255,204,51,.5) 62%,rgba(255,204,51,.5) 90%,transparent 90%);
   -webkit-box-decoration-break:clone;box-decoration-break:clone}
+/* LCIQ取扱店 ご案内ボックス */
+.pbox{margin-top:44px;background:#fff;border:1px solid var(--c-accent);border-radius:14px;padding:28px 30px;box-shadow:0 10px 26px -18px rgba(158,116,42,.45)}
+.pbox h3{font-family:var(--serif);font-size:21px;color:var(--c-main-d);margin:4px 0 12px}
+.pbox p{font-size:15.5px;line-height:1.9;margin:0 0 16px}
+.pbox-facts{list-style:none;padding:0;margin:0 0 20px;display:flex;flex-wrap:wrap;gap:10px 26px;font-size:15px}
+.pbox-facts span{display:inline-block;font-size:12.5px;color:#fff;background:var(--c-accent-d);border-radius:999px;padding:2px 10px;margin-right:8px}
+.pbox-btns{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px}
+.pbox-more{color:var(--c-main);font-size:15px}
+#partner{scroll-margin-top:90px}
+@media(max-width:600px){.pbox{padding:22px 20px}.pbox-btns .btn{width:100%;text-align:center}}
