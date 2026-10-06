@@ -414,3 +414,7 @@ select:focus-visible,textarea:focus-visible{outline:2px solid var(--c-accent);ou
   .hero-img .hero-bg{left:auto;right:0;width:64%;object-position:68% 40%}
   .hero-img::before{background:linear-gradient(90deg,#FBF7F1 0%,#FBF7F1 36%,rgba(251,247,241,.7) 44%,rgba(251,247,241,0) 56%)}
 }
+/* FV 強調：「結婚してからの幸せ」 くすみゴールド＋蛍光ペン風マーカー */
+.hero h1 .gold{color:#93640A;font-weight:700;padding:0 .06em;
+  background:linear-gradient(transparent 62%,rgba(255,204,51,.5) 62%,rgba(255,204,51,.5) 90%,transparent 90%);
+  -webkit-box-decoration-break:clone;box-decoration-break:clone}
