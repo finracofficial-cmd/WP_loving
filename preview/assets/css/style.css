@@ -428,3 +428,10 @@ select:focus-visible,textarea:focus-visible{outline:2px solid var(--c-accent);ou
 .pbox-more{color:var(--c-main);font-size:15px}
 #partner{scroll-margin-top:90px}
 @media(max-width:600px){.pbox{padding:22px 20px}.pbox-btns .btn{width:100%;text-align:center}}
+/* 記事が1件だけのときは横長カードで表示 */
+@media(min-width:761px){
+  .news-grid .ncard:only-child{grid-column:1/-1;flex-direction:row;max-width:860px;margin:0 auto;width:100%}
+  .news-grid .ncard:only-child .nc-img{flex:0 0 46%;aspect-ratio:auto;min-height:240px}
+  .news-grid .ncard:only-child .nc-body{display:flex;flex-direction:column;justify-content:center;padding:26px 30px}
+  .news-grid .ncard:only-child h3{font-size:19px}
+}
