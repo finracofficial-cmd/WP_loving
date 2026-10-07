@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>LOVE LIVING ホームページ運用マニュアル</title>
+<style>
+@page{size:A4;margin:16mm 15mm 18mm}
+:root{--main:#3A6450;--main-d:#284A39;--gold:#9E742A;--line:#E3D9CE;--tint:#F4F8F1;--cream:#FDF6EC;--red:#E53935;--text:#2B2724;--muted:#6B635D}
+*{box-sizing:border-box}
+html{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+body{font-family:"IPAPGothic","IPAGothic",sans-serif;color:var(--text);font-size:11.2pt;line-height:1.78;margin:0}
+h1,h2,h3{line-height:1.45;margin:0}
+.cover{height:257mm;display:flex;flex-direction:column;justify-content:center;page-break-after:always;border:1px solid var(--line);border-radius:6mm;padding:0 18mm;background:linear-gradient(160deg,#FFF9F1 0%,#FDEFE6 60%,#F8E6E2 100%)}
+.cover .en{letter-spacing:.3em;color:var(--gold);font-size:10pt}
+.cover h1{font-size:28pt;color:var(--main-d);margin:6mm 0 4mm}
+.cover p{font-size:12pt;color:var(--muted);margin:0}
+.cover img{width:100%;border-radius:3mm;margin:12mm 0 10mm;border:1px solid var(--line)}
+.cover .meta{font-size:10.5pt;color:var(--muted);line-height:2}
+.toc{page-break-after:always}
+.toc h2,.sec>h2{font-size:17pt;color:#fff;background:var(--main);padding:3mm 5mm;border-radius:2mm;margin:0 0 6mm}
+.toc ol{font-size:12.5pt;line-height:2.3;padding-left:7mm}
+.toc .hint{background:var(--cream);border-radius:3mm;padding:5mm 6mm;font-size:11pt;margin-top:8mm}
+.sec{page-break-before:always}
+.sec.cont{page-break-before:auto;margin-top:10mm}
+h3{font-size:13.5pt;color:var(--main-d);border-left:4px solid var(--gold);padding-left:3mm;margin:7mm 0 3mm}
+p{margin:0 0 3mm}
+.lead{font-size:12pt}
+.steps{counter-reset:s;list-style:none;padding:0;margin:0 0 4mm}
+.steps>li{counter-increment:s;position:relative;padding-left:11mm;margin-bottom:2.6mm}
+.steps>li::before{content:counter(s);position:absolute;left:0;top:.5mm;width:7mm;height:7mm;border-radius:50%;background:var(--red);color:#fff;font-weight:700;font-size:10.5pt;line-height:7mm;text-align:center}
+.steps.abc>li::before{content:attr(data-n)}
+.shot{margin:2mm 0 5mm;text-align:center;page-break-inside:avoid}
+.shot img{width:82%;border:1px solid #cfc7bf;border-radius:2mm}
+.shot.phone img{width:62mm}
+.shot.s60 img{width:60%}
+.shot.s68 img{width:56%}
+.shot figcaption{font-size:9.5pt;color:var(--muted);margin-top:1.5mm}
+.note,.warn,.tip{border-radius:2.5mm;padding:3.5mm 5mm;margin:3mm 0 5mm;font-size:11pt;page-break-inside:avoid}
+.note{background:var(--tint);border:1px solid #CFE0C8}
+.tip{background:var(--cream);border:1px solid #EFD9B9}
+.warn{background:#FDEDEA;border:1px solid #F0B5AA}
+.note>b:first-child,.tip>b:first-child,.warn>b:first-child{display:block;margin-bottom:1mm}
+.warn>b:first-child{color:#B3261E}
+table{width:100%;border-collapse:collapse;margin:2mm 0 5mm;font-size:10.8pt;page-break-inside:avoid}
+th,td{border:1px solid var(--line);padding:2.4mm 3mm;text-align:left;vertical-align:top}
+th{background:#F7F2EA;width:34%;font-weight:700}
+.k{display:inline-block;background:#fff;border:1px solid #bbb;border-bottom-width:2px;border-radius:1.5mm;padding:0 2mm;font-size:10pt;line-height:1.6}
+.btn{display:inline-block;background:#3858E9;color:#fff;border-radius:1.5mm;padding:0 2.5mm;font-size:10pt;line-height:1.7}
+.url{font-family:monospace;background:#F3F0EC;padding:.5mm 2mm;border-radius:1mm;font-size:10.5pt}
+.cols{display:flex;gap:6mm;align-items:flex-start}
+.cols>div{flex:1}
+.check li{margin-bottom:1.5mm}
+.small{font-size:9.5pt;color:var(--muted)}
+</style>
+</head>
+<body>
+
+<section class="cover">
+<div class="en">OPERATION MANUAL</div>
+<h1>LOVE LIVING<br>ホームページ運用マニュアル</h1>
+<p>お知らせ・イベントの更新と、日々の運用のしかた</p>
+<img src="img/00_site.jpg" alt="">
+<div class="meta">対象サイト：https://loveliving-marriage.com/<br>2026年10月版</div>
+</section>
+
+<section class="toc">
+<h2>もくじ</h2>
+<ol>
+<li>このマニュアルでできること</li>
+<li>管理画面に入る（ログイン）</li>
+<li>お知らせ・イベントを投稿する</li>
+<li>スマートフォンで投稿する</li>
+<li>投稿を直す・消す</li>
+<li>お問い合わせが届いたら</li>
+<li>お支払い方法・口座振替日を変える</li>
+<li>月に1回のお手入れ</li>
+<li>やってはいけないこと</li>
+<li>お金と契約のこと（サーバー・ドメイン）</li>
+<li>困ったとき</li>
+</ol>
+<div class="hint"><b>いちばんよく使うのは「3. お知らせ・イベントを投稿する」です。</b><br>
+はじめは、パソコンで一度ためしてから、スマートフォンでも使ってみてください。</div>
+</section>
+
+<!-- 1 -->
+<section class="sec">
+<h2>1. このマニュアルでできること</h2>
+<table>
+<tr><th>ご自分でできること</th><td>
+・お知らせ・イベントの記事を書く／写真を載せる<br>
+・記事を直す・消す<br>
+・お支払い方法、月会費の口座振替日を変える<br>
+・お問い合わせを受け取る（メールで届きます）</td></tr>
+<tr><th>制作担当にご依頼いただくこと</th><td>
+・トップページや料金表など、<b>ページの文章・料金・写真の変更</b><br>
+・ページやメニューを増やす<br>
+・デザインの変更</td></tr>
+</table>
+<div class="note"><b>どうして、ページの文章は自分で直せないの？</b>
+デザインが崩れないように、ページの中身は「テーマ」という仕組みの中に作り込んでいます。管理画面でページを開いて文字を書いても、ホームページには出ません。変更したいときは、制作担当にご連絡ください。</div>
+
+<h3>ホームページの「お知らせ・イベント」のしくみ</h3>
+<ul class="check">
+<li>記事を公開すると、<b>トップページ</b>と<b>「お知らせ・イベント」ページ</b>に、自動で新しい順に並びます。</li>
+<li>トップページには、新しいものから<b>3件</b>まで表示されます。</li>
+<li>記事が1件もないときは、トップページのお知らせ欄は表示されません。</li>
+</ul>
+</section>
+
+<!-- 2 -->
+<section class="sec">
+<h2>2. 管理画面に入る（ログイン）</h2>
+<p class="lead">ブラウザ（Chrome・Safari など）で、次のアドレスを開きます。</p>
+<p><span class="url">https://loveliving-marriage.com/wp-admin/</span></p>
+<p class="small">※エックスサーバーから届いたメール「サーバーアカウント設定完了のお知らせ」の「管理画面URL」と同じです。ブックマークしておくと便利です。</p>
+<ol class="steps">
+<li>「ユーザー名またはメールアドレス」を入れる</li>
+<li>「パスワード」を入れる</li>
+<li><span class="btn">ログイン</span> を押す</li>
+</ol>
+<figure class="shot s60"><img src="img/01_login.jpg" alt=""><figcaption>ログイン画面</figcaption></figure>
+<div class="warn"><b>パスワードは、ほかの人に教えないでください。</b>
+メモは、人の目に触れない場所に保管してください。ホームページの完成後、パスワードを変えていただくことをおすすめします。</div>
+<div class="tip"><b>ログインできないとき</b>
+・ログイン画面の「パスワードをお忘れですか？」から、登録したメールアドレスにパスワードを作り直すメールが届きます。<br>
+・<b>海外からはログインできません</b>（エックスサーバーの安全のための設定です）。旅行中などは、帰国してから操作してください。</div>
+</section>
+
+<!-- 3 -->
+<section class="sec">
+<h2>3. お知らせ・イベントを投稿する</h2>
+<h3>3-1. 新しい記事を作る</h3>
+<ol class="steps">
+<li>左のメニューの<b>「投稿」</b>を押す</li>
+</ol>
+<figure class="shot"><img src="img/02_dash.jpg" alt=""><figcaption>ログイン後の画面（ダッシュボード）</figcaption></figure>
+<ol class="steps abc"><li data-n="1">上の<b>「投稿を追加」</b>を押す</li></ol>
+<figure class="shot"><img src="img/03_posts.jpg" alt=""><figcaption>投稿の一覧</figcaption></figure>
+</section>
+
+<section class="sec">
+<h3>3-2. タイトルと文章を書く</h3>
+<ol class="steps">
+<li><b>タイトル</b>を書く（例：11月の婚活パーティーのお知らせ）</li>
+<li>その下に<b>文章</b>を書く。<span class="k">Enter</span> で次の段落になります</li>
+<li>写真を入れたいときは、左上の <span class="btn">＋</span> を押す（次のページ）</li>
+<li>最後に右上の <span class="btn">公開</span> を押す（3-5）</li>
+</ol>
+<figure class="shot"><img src="img/04_editor.jpg" alt=""><figcaption>記事を書く画面</figcaption></figure>
+<div class="tip"><b>イベント告知に書いておくとよいこと</b>
+日時／場所／参加費／対象（年齢など）／定員／お申し込み方法（公式LINE・お問い合わせフォームなど）</div>
+</section>
+
+<section class="sec">
+<h3>3-3. 写真を入れる</h3>
+<p>左上の <span class="btn">＋</span> を押すと、入れられるものの一覧が出ます。</p>
+<ol class="steps abc">
+<li data-n="A"><b>画像</b>：写真を1枚入れる</li>
+<li data-n="B"><b>ギャラリー</b>：写真を何枚かまとめて並べる（イベントの様子などに便利）</li>
+</ol>
+<p>押したあと<b>「アップロード」</b>を選び、パソコンやスマートフォンの中の写真を選びます。</p>
+<figure class="shot"><img src="img/05_inserter.jpg" alt=""><figcaption>＋を押したところ</figcaption></figure>
+<div class="warn"><b>参加者のお顔が写った写真は、必ずご本人の了承を取ってから載せてください。</b>
+婚活中であることを知られたくない方もいらっしゃいます。了承がない場合は、後ろ姿や会場の写真にするか、お顔が分からないように加工したものを使ってください。</div>
+<div class="note"><b>写真の大きさ</b>
+スマートフォンで撮った写真をそのまま入れて大丈夫です。自動で、ちょうどよい大きさに調整されます。</div>
+</section>
+
+<section class="sec">
+<h3>3-4. 一覧に出る写真・説明・種類を決める</h3>
+<p>画面の右側（「投稿」タブ）で設定します。右側が出ていないときは、右上の <span class="k">□</span> ボタンを押します。</p>
+<ol class="steps abc">
+<li data-n="5"><b>アイキャッチ画像を設定</b>：一覧やトップページに出る写真。<b>横長の写真</b>がきれいに見えます</li>
+<li data-n="6"><b>抜粋を追加</b>：一覧に出る1〜2行の説明。Googleの検索結果やSNSにも使われます</li>
+<li data-n="7"><b>カテゴリー</b>：記事の種類を<b>1つ</b>選んでチェック</li>
+</ol>
+<figure class="shot"><img src="img/06_sidebar.jpg" alt=""><figcaption>右側の設定</figcaption></figure>
+<table>
+<tr><th>イベント告知</th><td>これから開くイベントのご案内</td></tr>
+<tr><th>イベントレポート</th><td>開いたイベントの様子（写真つきがおすすめ）</td></tr>
+<tr><th>お知らせ</th><td>キャンペーン、お休みのご案内など。何も選ばないと、ここに入ります</td></tr>
+</table>
+</section>
+
+<section class="sec">
+<figure class="shot s68"><img src="img/07_excerpt.jpg" alt=""><figcaption>「抜粋を追加」を押したところ。1〜2行で書きます</figcaption></figure>
+<div class="note"><b>アイキャッチ画像・抜粋は、入れなくても表示は崩れません。</b>
+写真がないときはロゴが表示され、抜粋がないときは文章の最初の部分が表示されます。</div>
+
+<h3>3-5. 公開する</h3>
+<ol class="steps abc">
+<li data-n="8">右上の <span class="btn">公開</span> を押すと確認が出るので、もう一度 <span class="btn">公開</span> を押す</li>
+</ol>
+<figure class="shot s68"><img src="img/08_publish.jpg" alt=""><figcaption>最後の確認</figcaption></figure>
+<div class="tip"><b>あとで公開したいとき（予約投稿）</b>
+右側の「公開：<b>今すぐ</b>」を押して日時を選ぶと、その日時に自動で公開されます。<br>
+<b>途中でやめたいとき</b>は「下書き保存」を押します。ホームページには出ません。</div>
+</section>
+
+<!-- 4 -->
+<section class="sec">
+<h2>4. スマートフォンで投稿する</h2>
+<div class="cols">
+<div>
+<p>やり方はパソコンと同じです。画面が小さいので、ボタンの場所だけ覚えてください。</p>
+<ol class="steps">
+<li>ログインしたら、左上の <span class="k">≡</span> → <b>「投稿」</b> → <b>「投稿を追加」</b></li>
+<li>タイトルと文章を書く</li>
+<li>写真は <span class="btn">＋</span> → 「画像」または「ギャラリー」→「アップロード」→ 写真を選ぶ（その場で撮影もできます）</li>
+<li>アイキャッチ画像・抜粋・カテゴリーは、<span class="k">□</span>（設定）ボタンの中にあります</li>
+<li>最後に <span class="btn">公開</span> → もう一度 <span class="btn">公開</span></li>
+</ol>
+<div class="tip"><b>イベントの当日でも</b>
+会場で写真を撮って、その場で「イベントレポート」として投稿できます。</div>
+</div>
+<div style="flex:0 0 66mm"><figure class="shot phone"><img src="img/11_phone.jpg" alt=""><figcaption>スマートフォンの画面<br>（左から ＋／設定／公開）</figcaption></figure></div>
+</div>
+</section>
+
+<!-- 5 -->
+<section class="sec">
+<h2>5. 投稿を直す・消す</h2>
+<ol class="steps">
+<li>左のメニューの<b>「投稿」</b>を押す</li>
+<li>直したい記事のタイトルの上にマウスをのせると、下に文字が出ます
+  <br>・<b>編集</b>：直す（直したら右上の <span class="btn">保存</span>）
+  <br>・<b>ゴミ箱へ移動</b>：消す</li>
+</ol>
+<figure class="shot"><img src="img/03_posts.jpg" alt=""><figcaption>2 の位置に「編集」「ゴミ箱へ移動」が出ます（スマートフォンでは、記事を押すと出ます）</figcaption></figure>
+<div class="note"><b>まちがえて消したとき</b>
+「投稿」の一覧の上にある「ゴミ箱」から元に戻せます。ゴミ箱の記事は、<b>30日</b>たつと自動で完全に消えます。</div>
+</section>
+
+<!-- 6 -->
+<section class="sec">
+<h2>6. お問い合わせが届いたら</h2>
+<p>ホームページのお問い合わせフォームから送信があると、次のメールが届きます。</p>
+<table>
+<tr><th>有馬様に届くメール</th><td>件名：<b>【LOVE LIVING】お問い合わせがありました（○○ 様）</b><br>お名前・年齢・ご希望の内容・ご連絡方法・ご相談内容などが書かれています。</td></tr>
+<tr><th>お客様に届くメール</th><td>件名：【LOVE LIVING】お問い合わせを受け付けました<br>（自動で送られる確認のメールです）</td></tr>
+</table>
+<ol class="steps">
+<li>メールの<b>「ご希望のご連絡方法」</b>（メール・電話・公式LINE）を確認します</li>
+<li>メールで返すときは、届いたメールにそのまま<b>「返信」</b>すれば、お客様あてになります</li>
+<li>「ホームページを見た：はい」となっている方は、<b>キャンペーンの対象</b>です</li>
+</ol>
+<div class="warn"><b>メールが届かないときは、「迷惑メール」フォルダを見てください。</b>
+送信元は wordpress@loveliving-marriage.com です。迷惑メールに入っていたら「迷惑メールではない」に設定してください。それでも届かないときは、制作担当にご連絡ください。</div>
+</section>
+
+<!-- 7 -->
+<section class="sec">
+<h2>7. お支払い方法・口座振替日を変える</h2>
+<p>クレジットカードやPay払いが使えるようになったときは、ここを変えます。<br>
+<b>料金プラン・よくあるご質問・特定商取引法の表記の3ページに、自動で反映されます。</b></p>
+<ol class="steps">
+<li>左のメニューの<b>「外観」→「カスタマイズ」</b>を開き、<b>「LOVE LIVING の設定」</b>を押す</li>
+</ol>
+<figure class="shot"><img src="img/09a_customize.jpg" alt=""><figcaption>カスタマイズの画面</figcaption></figure>
+</section>
+
+<section class="sec">
+<ol class="steps abc">
+<li data-n="2"><b>お支払い方法</b>：例）現金／銀行振込／口座引き去り／クレジットカード</li>
+<li data-n="3"><b>補足（なくてもOK）</b>：例）初期費用・成婚料は、クレジットカード・PayPayでもお支払いいただけます</li>
+<li data-n="4"><b>口座振替日</b>：数字だけ入れます（例：27）</li>
+<li data-n="5"><b>お問い合わせの送信先</b>：お問い合わせメールを受け取るアドレス</li>
+<li data-n="6">最後に左上の <span class="btn">公開</span> を押して保存</li>
+</ol>
+<figure class="shot"><img src="img/09b_customize.jpg" alt=""><figcaption>「LOVE LIVING の設定」を開いたところ。右側で、変えた結果を確認できます</figcaption></figure>
+</section>
+
+<!-- 8 -->
+<section class="sec">
+<h2>8. 月に1回のお手入れ</h2>
+<p>ホームページを安全に保つため、<b>月に1回</b>、次のことをしてください（5分ほど）。</p>
+<ol class="steps">
+<li>左のメニューの<b>「ダッシュボード」→「更新」</b>を開く（数字が出ていたら、更新があります）</li>
+<li><b>「プラグイン」</b>の欄で「すべて選択」にチェック → <span class="btn">プラグインを更新</span></li>
+<li>終わったら、ホームページを開いて、表示がおかしくないか見る</li>
+</ol>
+<figure class="shot"><img src="img/10_update.jpg" alt=""><figcaption>更新の画面</figcaption></figure>
+<div class="note"><b>「WordPress の新しいバージョン」が出ているとき</b>
+小さな更新は自動で行われます。<b>大きな更新（数字の最初が変わるもの）は、制作担当に相談してから</b>行ってください。<br>
+<b>テーマ</b>（LOVE LIVING）の更新は表示されません。変更があるときは制作担当からお送りします。</div>
+<div class="tip"><b>もしものとき</b>
+エックスサーバーが、ホームページを毎日自動で保存しています（過去14日分）。表示がおかしくなっても戻せるので、あわてずに制作担当へご連絡ください。</div>
+</section>
+
+<!-- 9 -->
+<section class="sec">
+<h2>9. やってはいけないこと</h2>
+<p class="lead">次のことをすると、ホームページが表示されなくなったり、デザインが崩れたりします。</p>
+<table>
+<tr><th>テーマを変える・消す</th><td>「外観」→「テーマ」の <b>LOVE LIVING</b> は、変えたり消したりしないでください。</td></tr>
+<tr><th>固定ページを消す・名前を変える</th><td>「固定ページ」にある「ホーム」「料金プラン」などは、<b>消さない・タイトルやURL（スラッグ）を変えない</b>でください。</td></tr>
+<tr><th>知らないプラグインを入れる</th><td>便利そうに見えても、入れる前に制作担当にご相談ください。</td></tr>
+<tr><th>「設定」の中を変える</th><td>とくに「表示設定」「パーマリンク」は変えないでください。</td></tr>
+<tr><th>ユーザーを増やす</th><td>スタッフ用のログインを作りたいときは、ご相談ください。</td></tr>
+</table>
+<div class="note"><b>迷ったら、押す前にご連絡ください。</b>「これを押していいか」だけのご質問でも大丈夫です。</div>
+</section>
+
+<!-- 10 -->
+<section class="sec">
+<h2>10. お金と契約のこと（サーバー・ドメイン）</h2>
+<p>ホームページは、エックスサーバーとの契約で動いています。<b>お支払いが止まると、ホームページが消えてしまいます。</b></p>
+<table>
+<tr><th>サーバー</th><td>エックスサーバー（スタンダード）。契約期間が終わる前に、更新のお支払いが必要です。</td></tr>
+<tr><th>ドメイン</th><td>loveliving-marriage.com（サーバー契約の特典で無料）。<b>サーバー契約を続けている限り</b>無料です。</td></tr>
+<tr><th>おすすめ</th><td>エックスサーバーの管理画面で<b>「自動更新」</b>をオンにし、クレジットカードの<b>有効期限</b>が切れたら、カード情報を新しくしてください。</td></tr>
+</table>
+<div class="warn"><b>エックスサーバーからのメールは、見落とさないでください。</b>
+「更新期限のお知らせ」などのメールが届きます。<br>
+※最近、エックスサーバーを名乗るにせのメール（フィッシング）も出回っています。メールのリンクからではなく、ブックマークしたエックスサーバーの管理画面から確認してください。</div>
+</section>
+
+<!-- 11 -->
+<section class="sec cont">
+<h2>11. 困ったとき</h2>
+<p>制作担当（ディレット）へ、ココナラのメッセージでご連絡ください。<br>次の3つを教えていただけると、早く解決できます。</p>
+<ol class="steps">
+<li><b>どのページ</b>で（例：トップページ、記事を書く画面）</li>
+<li><b>何をしたら</b>どうなったか（例：公開を押したら、エラーが出た）</li>
+<li>その画面の<b>スクリーンショット</b></li>
+</ol>
+</section>
+
+</body>
+</html>

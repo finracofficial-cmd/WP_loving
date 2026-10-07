@@ -77,6 +77,11 @@ function ll_setup_site() {
 	// 未分類のまま投稿したときは「お知らせ」に入るように
 	if ( ! empty( $cat_ids['info'] ) ) {
 		update_option( 'default_category', $cat_ids['info'] );
+		// 使わない「未分類」は、記事が入っていなければ削除（選択肢に出て迷わないように）
+		$uncat = get_term_by( 'slug', 'uncategorized', 'category' );
+		if ( $uncat && 0 === (int) $uncat->count && (int) $uncat->term_id !== (int) $cat_ids['info'] ) {
+			wp_delete_term( $uncat->term_id, 'category' );
+		}
 	}
 
 	// 初期のサンプル投稿・ページをゴミ箱へ
