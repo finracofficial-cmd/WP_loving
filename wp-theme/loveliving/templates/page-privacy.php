@@ -45,5 +45,5 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 
 <h3 style="margin-top:36px">8. 改定</h3>
 <p class="lead">当社は、必要に応じて本ポリシーを改定することがあります。改定した場合は、本ページにて公表いたします。</p>
-<p style="font-size:14px;color:var(--c-muted);margin-top:34px">制定日：2026年10月25日</p>
+<p style="font-size:14px;color:var(--c-muted);margin-top:34px">制定日：<?php echo esc_html( ll_opt( 'll_enact_date' ) ); ?></p>
 </div></section>

@@ -56,11 +56,23 @@ PAY = "<?php echo ll_pay_html(); ?>"
 DAY = "<?php echo esc_html( ll_opt( 'll_debit_day' ) ); ?>"
 
 
+def camp_dynamic(s):
+    """キャンペーン：クーポンを設定値から出し、表示オフなら欄ごと消す"""
+    m = re.search(r'<section class="[^"]*"><div class="wrap"><div class="camp">.*?</section>', s, re.S)
+    assert m, "キャンペーン欄が見つかりません"
+    block = m.group(0)
+    block = re.sub(r'<div class="coupons">.*?</div></div>\n', '<div class="coupons">\n<?php echo ll_coupons_html(); // phpcs:ignore ?>\n</div>\n', block, count=1, flags=re.S)
+    assert "ll_coupons_html" in block
+    block = "<?php if ( ll_opt( 'll_camp_show' ) ) : ?>\n" + block + "\n<?php endif; ?>"
+    return s[:m.start()] + block + s[m.end():]
+
+
 def page_specific(slug, s):
     if slug == "price":
         s = sub1(s, "<tr><th>お支払い方法</th><td>現金／銀行振込／口座引き去り</td></tr>",
                  "<tr><th>お支払い方法</th><td>%s</td></tr>" % PAY)
         s = sub1(s, "口座振替（毎月27日）", "口座振替（毎月%s日）" % DAY)
+        s = camp_dynamic(s)
     elif slug == "faq":
         s = sub1(s, "現金・銀行振込・口座引き去りに対応しております。",
                  "<?php echo esc_html( ll_opt( 'll_pay_methods' ) ); ?>に対応しております。"
@@ -69,7 +81,9 @@ def page_specific(slug, s):
     elif slug == "law":
         s = sub1(s, "現金／銀行振込／口座引き去り<br>", PAY + "<br>")
         s = sub1(s, "月会費：毎月27日の口座振替", "月会費：毎月%s日の口座振替" % DAY)
-    elif slug == "contact":
+    if slug in ("privacy", "law"):
+        s = sub1(s, "制定日：2026年10月25日", "制定日：<?php echo esc_html( ll_opt( 'll_enact_date' ) ); ?>")
+    if slug == "contact":
         a = s.index("<form ")
         b = s.index("</form>") + len("</form>")
         s = s[:a] + "<?php get_template_part( 'parts/contact-form' ); ?>" + s[b:]
@@ -109,6 +123,7 @@ def main():
     m = re.search(r'<section class="sec"><div class="wrap">\n<div class="sec-h"><span class="en">News &amp; Event</span>.*?</section>', s, re.S)
     assert m, "お知らせ欄が見つかりません"
     s = s[:m.start()] + "<?php get_template_part( 'parts/news-top' ); ?>" + s[m.end():]
+    s = camp_dynamic(s)
     s, c = split_cta(s)
     cta = cta or c
     write("templates/front.php", HEAD + php_links(s) + "\n")

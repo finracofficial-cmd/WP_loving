@@ -40,5 +40,5 @@ if ( ! defined( 'ABSPATH' ) ) { exit; }
 <h3 style="margin-top:44px">ご契約前のご説明について</h3>
 <p class="lead">ご入会のお手続きの際に、サービス内容、料金、契約期間、中途解約の条件、お見合いのルールなどについて、書面をもってご説明いたします。ご不明な点はその場で遠慮なくお尋ねください。</p>
 
-<p style="font-size:14px;color:var(--c-muted);margin-top:40px">制定日：2026年10月25日</p>
+<p style="font-size:14px;color:var(--c-muted);margin-top:40px">制定日：<?php echo esc_html( ll_opt( 'll_enact_date' ) ); ?></p>
 </div></section>

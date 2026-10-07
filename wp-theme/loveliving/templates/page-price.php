@@ -106,14 +106,15 @@ IBJに加えて、NNR（日本仲人連盟）に登録されている方とも�
 <p class="tax">ご入金の確認後、プロフィールの作成に進みます。ご入会後すぐに活動が始まるわけではございませんので、あらかじめご了承ください。</p>
 </div></section>
 
+<?php if ( ll_opt( 'll_camp_show' ) ) : ?>
 <section class="sec"><div class="wrap"><div class="camp">
 <span class="en">Campaign</span><h2>ホームページ公開記念</h2>
 <p>期間に応じて、婚活にかかる費用にお使いいただけるクーポンをご用意しました。</p>
 <div class="coupons">
-<div class="coupon"><span class="amt">30,000円</span><span class="term">2026年10月25日<br>〜 12月31日</span></div>
-<div class="coupon"><span class="amt">20,000円</span><span class="term">2027年1月1日<br>〜 2月28日</span></div>
-<div class="coupon"><span class="amt">10,000円</span><span class="term">2027年3月1日<br>〜 4月30日</span></div></div>
+<?php echo ll_coupons_html(); // phpcs:ignore ?>
+</div>
 <p class="note">お問い合わせの際に「ホームページを見た」とお伝えください。／ご入会後、初期費用・成婚料にお使いいただけます。<br>
 ご退会された場合は無効となります。／他のキャンペーンとの併用はできません。</p>
 </div></div></section>
+<?php endif; ?>
 <?php get_template_part( 'parts/cta' ); ?>
