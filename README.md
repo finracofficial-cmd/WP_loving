@@ -13,6 +13,14 @@
 | [docs/05-支給素材一覧.md](docs/05-支給素材一覧.md) | 支給素材の棚卸しと不足リスト |
 | [docs/06-料金体系.md](docs/06-料金体系.md) | 料金・講座・キャンペーンと特商法の整理 |
 | [docs/07-ヒアリング回答_0915-0916.md](docs/07-ヒアリング回答_0915-0916.md) | Q1〜Q13の回答と、そこから派生した論点 |
+| [docs/13-仕様確定.md](docs/13-仕様確定.md) | 確定仕様と修正履歴 |
+| [docs/14-WordPress実装手順.md](docs/14-WordPress実装手順.md) | テーマの入れ方・初期設定・更新方法 |
+
+## WordPress テーマ
+
+- `preview/` … 先方確認済みの静的プレビュー
+- `wp-theme/loveliving/` … WordPress テーマ（`python3 tools/build_theme.py` で preview から生成）
+- `dist/loveliving-theme.zip` … アップロード用 ZIP（生成物・リポジトリ外）
 
 ## 概要
 
