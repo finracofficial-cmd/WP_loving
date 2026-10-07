@@ -15,6 +15,7 @@
 | [docs/07-ヒアリング回答_0915-0916.md](docs/07-ヒアリング回答_0915-0916.md) | Q1〜Q13の回答と、そこから派生した論点 |
 | [docs/13-仕様確定.md](docs/13-仕様確定.md) | 確定仕様と修正履歴 |
 | [docs/14-WordPress実装手順.md](docs/14-WordPress実装手順.md) | テーマの入れ方・初期設定・更新方法 |
+| [docs/15-AIOSEO設定.md](docs/15-AIOSEO設定.md) | All in One SEO の設定値（コピペ用） |
 
 ## WordPress テーマ
 
